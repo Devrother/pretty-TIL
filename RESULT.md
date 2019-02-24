@@ -1,0 +1,9 @@
+./test_directory
+test_directory\section1
+test_directory\section1\chapter1
+test_directory\section1\chapter1\article1
+test_directory\section1\chapter1\article1\article2
+test_directory\section1\chapter2
+test_directory\section1\chapter3
+test_directory\section2
+test_directory\section2\chapter1
