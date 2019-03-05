@@ -45,5 +45,43 @@ const makingREADME = (filteredTree) => {
     });
 }
 
-const testDir = dirTree("./test_directory", { extensions: /\.md/, exclude: /node_modules/ }); // .md 파일만 트리에 저장, 디렉토리 타입도 트리에 저장된다.
-makingREADME(testDir);
+const dirToTree = (path, ext, excl) => {
+    const tree = dirTree(path, { extensions: ext, exclude: excl });
+    return tree
+}
+
+const treeToData = (tree) => {
+    let exampleData = `<start pretty-til>
+
+    ### Category
+    - [Python]()
+    - [Devops]()
+    - [Git]()
+    
+    ### Python
+    - [python_basic]()
+    - [python_basic2]()
+    
+    ### Devops
+    - [devops_basic]()
+    - [what_is_devops]()
+    - #### Kubernetes
+        - [k8s_basic]()
+        - [what_is_pod]()
+    
+    ### Git
+    - [git_basic]()
+    `
+
+    return exampleData
+}
+
+const writeReadmeFile = () => {
+
+}
+
+// makingREADME(testDir);
+
+module.exports = {
+    dirToTree, treeToData, writeReadmeFile
+}
